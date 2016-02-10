@@ -1,0 +1,93 @@
+.footer{
+	@extend %clearfix;
+	padding: 40px 0;
+	@include media ('<desktop'){
+		padding: 40px 30px;
+	}
+	@include media ('<tablet'){
+		padding: 0;
+	}
+}
+.footer-nav{
+	@extend %clearfix;
+	float: left;
+	color: #666;
+	font: 14px "Roboto";
+	@include media ('<tablet'){
+		float: none;
+	}
+	.item-list{
+		@extend %clearfix;
+		padding: 0;
+		margin: 0;
+		@include media ('<tablet'){
+			display: inline-block;
+		} 
+	}
+	li{
+		list-style-type: none;
+		@include media ('<tablet'){
+			display: block;
+			float: left;
+			padding: 0 7px;
+		}
+	}
+	a{
+		color: inherit;
+		line-height: 23px;
+		transition: color .3s linear;
+		&:hover{
+			color: #ff4e50;
+		}
+	}
+	h2{
+		font-size: 14px;
+		line-height: 15px;
+		font-weight: bold;
+		margin: 0 0 10px;
+		@include media ('<tablet'){
+			margin: 0;
+		}
+	}
+	.box{
+		float: left;
+		margin: 0 0 0 100px;
+		@include media ('<tablet'){
+			margin: 0 0 8px;
+			width: 100%;
+			text-align: center;
+		}
+		&:last-child{
+			@include media ('<desktop'){
+				margin: 0;
+			}
+		}
+	}
+}
+.company{
+	margin: 0;
+}
+.footer-logo{
+	display: block;
+	float: left;
+	max-width: 140px;
+	@include media ('<tablet'){
+		float: none;
+		margin: 17px auto 12px;
+	}
+}
+.designed-by{
+	float: right;
+	text-align: right;
+	color: #ccc;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+	@include media ('<tablet'){
+		float: none;
+		text-align: center;
+	}
+	p{
+		margin: 0 0 5px;
+	}
+}

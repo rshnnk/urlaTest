@@ -1,0 +1,47 @@
+.navbar{
+	float: right;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 0;
+	margin: 0 0 147px;
+	@include media ('<tablet'){
+		margin: 0;
+		padding: 20px 0 0;
+		float: none;
+	}
+}
+.nav-list{
+	@extend %clearfix;
+	margin: 0;
+	@include media ('<tablet'){
+		display: inline-block;
+		text-align: center;
+		padding: 0
+	}
+	li{
+		list-style-type: none;
+		float: left;
+		margin: 0;
+	}
+	a{
+		padding: 6px 18px;
+		border-radius: 20px;
+		color: $white;
+		border: 2px solid transparent;
+		display: block;
+		line-height: 21px;
+		transition: background .3s linear;
+		&:hover{
+			border: 2px solid $white;
+			background: $white;
+			color: #ff4e50;
+		}
+		&.selected{
+			background: transparent;
+			border: 2px solid $white;
+			&:hover{
+				background: $white;
+			}
+		}
+	}
+}

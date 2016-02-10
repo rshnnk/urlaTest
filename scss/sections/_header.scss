@@ -1,0 +1,14 @@
+.header{
+	@extend %clearfix;
+	.logo{
+		float: left;
+		width: 177px;
+		line-height: 45px;
+		@include media ('<tablet'){
+			position: absolute;
+			top: 163px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}

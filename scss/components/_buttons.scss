@@ -1,0 +1,22 @@
+.btn{
+	width: 190px;
+	background: #ff4e50;
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0;
+	border-radius: 20px;
+	color: $white;
+	border: 2px solid #ff4e50;
+	display: block;
+	text-align: center;
+	line-height: 37px;
+	transition: all .3s linear;
+	&:hover{
+		background: $white;
+		color: #ff4e50;
+		border-color: $white; 
+	}
+	@include media ('<tablet'){
+		width: 100%;
+	}
+}

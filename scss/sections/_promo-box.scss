@@ -1,0 +1,73 @@
+.promo-box {
+	height: 100vh;
+	width: 100%;
+	background: url('../images/bg-promo.png') no-repeat;
+	background-size: cover;
+	padding: 38px 0 0;
+	color: $white;
+	text-align: center;
+	font: 300 22px/24px "Roboto";
+	letter-spacing: 1px;
+
+	@include media ('retina2x') {
+		background: url('../images/bg-promo-2x.png') no-repeat;
+		background-size: cover;
+	}
+	@include media ('<desktop') {
+		background: url('../images/bg-promo-tablet.png') no-repeat;
+		background-size: cover;
+		height: 700px;
+	}
+	@include media ('<tablet') {
+		background: url('../images/bg-promo-mobile.png') no-repeat;
+		padding: 0;
+		min-height: 540px;
+		height: auto;
+		background-size: cover;
+		font-size: 18px;
+		line-height: 22px;
+	}
+	@include media ('<tablet', 'retina2x') {
+		background: url('../images/bg-promo-mobile-2x.png') no-repeat;
+		background-size: cover;
+	}
+	.btn {
+		margin: 0 auto;
+	}
+	h1 {
+		font-size: 50px;
+		line-height: 60px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+
+		@include media ('<desktop') {
+			letter-spacing: -4px;
+		}
+		@include media ('<tablet') {
+			font-size: 30px;
+			line-height: 35px;
+			letter-spacing: 0;
+			margin: 162px 0 8px;
+		}
+	}
+	p {
+		margin: 0 0 34px;
+
+		@include media ('<tablet') {
+			margin: 0 0 15px;
+		}
+	}
+	.btn {
+		width: 225px;
+
+		@include media ('<tablet') {
+			line-height: 36px;
+			width: 100%;
+		}
+	}
+}
+.header {
+	@include media ('<desktop') {
+		padding: 0 40px;
+	}
+}
